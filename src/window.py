@@ -1,7 +1,5 @@
 from tkinter import Tk, BOTH, Canvas
-from line import Line
-from point import Point
-from cell import Cell
+from graphics import Point, Line, Cell
 class Window():
     def __init__(self, widht:int, height:int) -> None:
 

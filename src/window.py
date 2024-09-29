@@ -1,5 +1,5 @@
 from tkinter import Tk, BOTH, Canvas
-from graphics import Point, Line, Cell
+from graphics import Point, Line, Cell, Maze
 class Window():
     def __init__(self, widht:int, height:int) -> None:
 
@@ -26,10 +26,6 @@ class Window():
         line.draw(self.__canvas, fill_color)
 if __name__=="__main__":
     win = Window(800,600)
-    my_cell_1 = Cell(win)
-    my_cell_2 = Cell(win)
-    my_cell_1.draw(100, 100, 200, 200)
-    my_cell_2.draw(400, 400, 600, 600)
+    maze = Maze(10,10,4,4,50,50,win)
 
-    my_cell_1.draw_move(my_cell_2,False)
     win.wait_for_close()

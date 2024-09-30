@@ -4,27 +4,27 @@ from maze import Maze
 class Window():
     def __init__(self, widht:int, height:int) -> None:
 
-        self.__root = Tk()
-        self.__root.title("My_window")
-        self.__canvas = Canvas(self.__root,bg = "white", width=widht, height=height)
-        self.__canvas.pack()
-        self.__window_running = False
-        self.__root.protocol("WM_DELETE_WINDOW", self.close)
+        self._root = Tk()
+        self._root.title("My_window")
+        self._canvas = Canvas(self._root,bg = "white", width=widht, height=height)
+        self._canvas.pack()
+        self._window_running = False
+        self._root.protocol("WM_DELETE_WINDOW", self.close)
 
     def redraw(self):
-        self.__root.update_idletasks()
-        self.__root.update()
+        self._root.update_idletasks()
+        self._root.update()
     
     def wait_for_close(self):
-        self.__window_running = True
-        while self.__window_running == True:
+        self._window_running = True
+        while self._window_running == True:
             self.redraw()
     
     def close(self):
-        self.__window_running = False
+        self._window_running = False
 
     def draw_line(self,line:Line, fill_color:str):
-        line.draw(self.__canvas, fill_color)
+        line.draw(self._canvas, fill_color)
 if __name__=="__main__":
     win = Window(800,600)
     maze = Maze(10,10,4,4,50,50,win)

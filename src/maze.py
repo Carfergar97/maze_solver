@@ -29,5 +29,7 @@ class Maze():
         self.__animate()
 
     def __animate(self):
+        if self.__win == None:
+            raise Exception("There is no Window associtated to this Maze!!!")
         self.__win.redraw()
         time.sleep(0.05)

@@ -1,5 +1,6 @@
 from tkinter import Tk, BOTH, Canvas
-from graphics import Point, Line, Cell, Maze
+from graphics import Point, Line, Cell
+from maze import Maze
 class Window():
     def __init__(self, widht:int, height:int) -> None:
 

@@ -25,8 +25,3 @@ class Window():
 
     def draw_line(self,line:Line, fill_color:str):
         line.draw(self._canvas, fill_color)
-if __name__=="__main__":
-    win = Window(800,600)
-    maze = Maze(10,10,4,4,50,50,win)
-
-    win.wait_for_close()
